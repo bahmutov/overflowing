@@ -2,7 +2,8 @@
 // MIT License
 // overflow('.foo');
 // adds class "overflowing" to elements with class "foo" that overflow their size.
-function overflowing(selector) {
+function overflowing(selector, highlight) {
+
   function createClass(name, rules) {
     var style = document.createElement('style');
     style.type = 'text/css';
@@ -34,19 +35,19 @@ function overflowing(selector) {
     el.classList.remove(overflowingClass);
   }
 
+  Array.prototype.forEach.call(document.all, removeOverflowingClass);
+
   var els = document.querySelectorAll(selector);
   var elements = Array.prototype.slice.call(els, 0);
 
-  elements.forEach(removeOverflowingClass);
   var overflowingElements = elements.filter(isOverflowing);
 
-  if (overflowingElements.length) {
+  if (highlight && overflowingElements.length) {
     createClass('.' + overflowingClass, 'border: 1px solid red;');
+    overflowingElements.forEach(addOverflowingClass);
   }
-  overflowingElements
-    .forEach(printOverflowing);
-  overflowingElements
-    .forEach(addOverflowingClass);
+
+  overflowingElements.forEach(printOverflowing);
 
   if (overflowingElements.length) {
     throw new Error('When window is ' + window.innerWidth + ',' + window.innerHeight + ' pixels ' +
