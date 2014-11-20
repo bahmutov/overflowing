@@ -1,0 +1,26 @@
+{
+  "name": "overflowing",
+  "version": "0.0.0",
+  "authors": [
+    "Gleb Bahmutov <gleb.bahmutov@gmail.com>"
+  ],
+  "description": "Finds page elements that are overflowing",
+  "main": "overflowing.js",
+  "keywords": [
+    "dom",
+    "page",
+    "visual",
+    "element",
+    "overflowing",
+    "test"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/bahmutov/overflowing",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
