@@ -49,6 +49,7 @@ function overflowing(selector) {
     .forEach(addOverflowingClass);
 
   if (overflowingElements.length) {
-    throw new Error(overflowingElements.length + ' elements ' + selector + ' are overflowing');
+    throw new Error('When window is ' + window.innerWidth + ',' + window.innerHeight + ' pixels ' +
+      overflowingElements.length + ' elements ' + selector + ' are overflowing');
   }
 }
