@@ -2,7 +2,7 @@
 
 > Finds page elements that are overflowing
 
-![overflowing screenshot][test/overflowing.png]
+![overflowing screenshot](test/overflowing.png)
 
 `bower install overflowing` then include on the page, or use as [code snippet][snippets]
 
