@@ -1,7 +1,15 @@
 // Gleb Bahmutov <gleb.bahmutov@gmail.com>
 // MIT License
+// Install: bower install overflowing
+// Include on the page this file overflowing.js
+//
 // overflow('.foo');
-// adds class "overflowing" to elements with class "foo" that overflow their size.
+//   finds all elements with class "foo" with content overflowing their limits
+// overflow('.foo', true)
+//   adds class "overflowing" all overflowing elements (red border)
+//
+// If overflowing elements are found, it throws an exception with useful info
+// Returns list of found elements
 function overflowing(selector, highlight) {
 
   function createClass(name, rules) {
@@ -50,7 +58,12 @@ function overflowing(selector, highlight) {
   overflowingElements.forEach(printOverflowing);
 
   if (overflowingElements.length) {
-    throw new Error('When window is ' + window.innerWidth + ',' + window.innerHeight + ' pixels ' +
-      overflowingElements.length + ' elements ' + selector + ' are overflowing');
+    // throws error asynchronously to prevent breaking the outside code
+    setTimeout(function throwError() {
+      throw new Error('When window is ' + window.innerWidth + ' x ' + window.innerHeight + ' pixels ' +
+        overflowingElements.length + ' elements ' + selector + ' are overflowing');
+    }, 0);
   }
+
+  return overflowingElements;
 }

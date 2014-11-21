@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>overflowing test</title>
+  <style>
+    table {
+      border: 1px solid black;
+      padding: 10px;
+    }
+    tr {
+      height: 20px;
+      max-width: 200px;
+    }
+    td {
+      max-width: 100px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <h2>overflowing test page</h2>
+  <p>The table below is overflowing one of the cells</p>
+  <table>
+    <tr><td>column A</td><td>column B</td></tr>
+    <tr><td><pre>this cell has too much content!</pre></td><td>cell B2</td></tr>
+  </table>
+  <p>
+  Available at <a href="https://github.com/bahmutov/overflowing">https://github.com/bahmutov/overflowing</a>
+</body>
+</html>

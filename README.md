@@ -2,6 +2,16 @@
 
 > Finds page elements that are overflowing
 
+![overflowing screenshot][test/overflowing.png]
+
+`bower install overflowing` then include on the page, or use as [code snippet][snippets]
+
+    overflowing('td', true);
+    // finds all elements with selector `td` that overflow, 
+    // highlights them and throws an error
+    overflowing('.foo');
+    // finds all elements with class '.foo' that overflow and throws an error
+
 ## MIT License
 
 Copyright (c) 2014 Gleb Bahmutov
@@ -26,3 +36,5 @@ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
+
+[snippets]: http://bahmutov.calepin.co/chrome-devtools-code-snippets.html
