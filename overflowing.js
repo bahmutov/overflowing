@@ -36,11 +36,15 @@ function overflowing(selector, highlight) {
   var overflowingClass = 'overflowing';
 
   function addOverflowingClass(el) {
-    el.classList.add(overflowingClass);
+    if (el && el.classList) {
+      el.classList.add(overflowingClass);
+    }
   }
 
   function removeOverflowingClass(el) {
-    el.classList.remove(overflowingClass);
+    if (el && el.classList) {
+      el.classList.remove(overflowingClass);
+    }
   }
 
   Array.prototype.forEach.call(document.all, removeOverflowingClass);
