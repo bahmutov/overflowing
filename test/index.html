@@ -16,6 +16,18 @@
       max-width: 100px;
       border: 1px solid black;
     }
+
+    #log {
+      margin: 10px 0px;
+      display: block;
+      white-space: pre;
+      font-family: monospace;
+    }
+    #log:before {
+      content: "demo javascript:";
+      font-style: italic;
+      color: #555;
+    }
   </style>
 </head>
 <body>
@@ -28,5 +40,11 @@
   <p>
   Available at <a href="https://github.com/bahmutov/overflowing">https://github.com/bahmutov/overflowing</a>
   <script src="../overflowing.js"></script>
+
+  <script src="https://rawgit.com/bahmutov/console-log-div/master/console-log-div.js"></script>
+  <script id="log">
+    overflowing('td', true);
+  </script>
+
 </body>
 </html>
