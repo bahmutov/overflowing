@@ -4,6 +4,8 @@
 
 ![overflowing screenshot](test/overflowing.png)
 
+[![Build status][ci-image]][ci-url]
+
 `bower install overflowing` then include on the page, or use as [code snippet][snippets]
 
     overflowing('td', true);
@@ -37,4 +39,7 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-[snippets]: http://bahmutov.calepin.co/chrome-devtools-code-snippets.html
+[snippets]: http://glebbahmutov.com/blog/chrome-dev-tools-code-snippets/
+
+[ci-image]: https://travis-ci.org/bahmutov/overflowing.png?branch=master
+[ci-url]: https://travis-ci.org/bahmutov/overflowing
