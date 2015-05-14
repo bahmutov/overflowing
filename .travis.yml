@@ -6,4 +6,5 @@ branches:
     - master
 before_script:
   - npm install -g clean-console
-script: "clean-console test/index.html"
+# expect 2 errors on the page
+script: "clean-console test/index.html --expect 2"
